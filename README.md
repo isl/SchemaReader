@@ -31,7 +31,7 @@ SchemaReader is a simple Java API to parse xsd schema files. It uses [java.net X
 as simple as possible. It supports most xsd structures and styles, but not all of them, so feel free to expand it.
 
 ## Build - Run
-Folders src and lib contain all the files needed to build and create a jar file.
+Folder src contain all the files needed to build and create a jar file. This project is a Maven project, providing all the libs in pom.xml.
 
 ## Usage
 The SchemaReader dependecies and licenses used are described in file SchemaReader-Dependencies-LicensesUsed.txt 

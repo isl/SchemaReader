@@ -5,6 +5,13 @@
     <artifactId>SchemaReader</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
+	<licenses>
+        <license>
+            <name>EUPL v.1.1</name>
+            <url>http://ec.europa.eu/idabc/eupl</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>

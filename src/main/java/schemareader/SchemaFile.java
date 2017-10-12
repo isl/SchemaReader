@@ -48,8 +48,10 @@ import javax.xml.validation.Validator;
 import org.xml.sax.SAXException;
 
 /**
- * SchemaFile is a class used to parse xsd schema files. It contains several methods to
- * validate an xml file, create xml templates or simply get element names given a xpath.
+ * SchemaFile is a class used to parse xsd schema files. It contains several
+ * methods to validate an xml file, create xml templates or simply get element
+ * names given a xpath.
+ *
  * @author samarita
  */
 public class SchemaFile {
@@ -59,6 +61,7 @@ public class SchemaFile {
 
     /**
      * SchemaFile constructor
+     *
      * @param xsdFile Absolute path of xsd file as a <code>String</code>
      */
     public SchemaFile(String xsdFile) {
@@ -72,6 +75,7 @@ public class SchemaFile {
 
     /**
      * Gets all element names of SchemaFile
+     *
      * @return All element names as a <code>ArrayList</code>
      */
     public ArrayList<String> getElements() {
@@ -318,6 +322,9 @@ public class SchemaFile {
                 if (el.attributes.containsKey("ics_type") || el.attributes.containsKey("sps_type")) {
                     temp = temp.append("<valueFrom type=\"\"></valueFrom>\r\n");
                 }
+                if (el.attributes.containsKey("sps_facet")) {
+                    temp = temp.append("<facet username=\"ExternalReader\" themasUrl=\"http://139.91.183.97:8080/THEMAS/\" thesaurusName=\"TESTDATA\" facetId=\"\"/>\r\n");
+                }
                 output.append(temp).append("</node>");
             }
         }
@@ -329,7 +336,8 @@ public class SchemaFile {
      * Creates xml subtrees according to a SchemaFile
      *
      * @param xpath Subtree root as a <code>String</code>
-     * @param mode Creation mode as a <code>String</code> ("minimum","medium" or "maximum" for now)
+     * @param mode Creation mode as a <code>String</code> ("minimum","medium" or
+     * "maximum" for now)
      * @return
      */
     public String createXMLSubtree(String xpath, String mode) {

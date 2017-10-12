@@ -47,7 +47,7 @@ schema.validate('xml content to validate','validation message language');
 schema.createXMLSubtree('root element xpath', "mode (minimum, medium or maximum");
 ```
 
-See javadoc for more details.
+Read javadoc for more details.
 
 
 
